@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5 JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio5 JavaScript</h1>
+    </header>
+    <script>
+        alert("Bienvenido a la actividad 5")
+        var peso;
+        var estatura;
+        var edad;
+        var estatura2;
+        var imc;
+        var imcF;
+        var resultadoimc;
+
+        peso=prompt('Indica tu peso en kg:');
+        estatura=prompt('Indica tu estatura en metros:');
+        edad=prompt('Indica tu edad:');
+
+        estatura2=Math.pow(estatura,2);
+        imc=(peso/estatura2);
+        imcF= imc.toFixed(2);
+        console.log(imcF);
+        
+
+        resultadoimc=`Tu Indice de Masa Corporal(IMC) tiene un valor de ${imcF}`
+        console.log(resultadoimc);
+        document.write(resultadoimc);
+
+        if(imc < 22 && edad < 45) {
+             console.log("Tu riesgo de enfermedad coronaria es bajo");
+             alert("Tu riesgo de enfermedad coronaria es bajo.");
+              }
+        else if(imc >= 22 && edad < 45) {
+             console.log("Tu riesgo de enfermedad coronaria es medio");
+             alert("Tu riesgo de enfermedad coronaria es medio.");
+             }
+        else if(imc < 22 && edad >= 45) {
+             console.log("Tu riesgo de enfermedad coronaria es medio");
+             alert("Tu riesgo de enfermedad coronaria es medio.");
+             }
+        else if(imc >= 22 && edad >= 45) {
+             console.log("Tu riesgo de enfermedad coronaria es alto");
+             alert("Tu riesgo de enfermedad coronaria es alto.");
+             } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio3 JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio3 JavaScript</h1>
+    </header>
+    <script>
+         alert("Bienvenido a la actividad 3")
+         var AA;
+         var BB;
+         var CC;
+         var AAElevado;
+         var BBElevado; 
+         var sumaAABB;
+         var resultado3;
+
+         AA=prompt('Valor de cateto AA:');
+         BB=prompt('Valor de cateto BB:');
+
+         AAElevado=Math.pow(AA,2);
+         console.log(AAElevado);
+
+         BBElevado=Math.pow(BB,2);
+         console.log(BBElevado);
+
+         sumaAABB=(AAElevado+BBElevado);
+         console.log(sumaAABB);
+
+         CC=Math.sqrt(sumaAABB);
+         console.log(CC);
+         
+         resultado3=`La hipotenusa del triangulo con catetos ${AA} y ${BB} es ${CC}.`;
+         console.log(resultado3);
+         document.write(resultado3)
+    </script>
+</body>
+</html>

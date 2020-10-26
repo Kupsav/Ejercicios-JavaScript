@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio6 JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio6 JavaScript</h1>
+    </header>
+    <script>
+         alert("Bienvenido a la actividad 6")
+         var numeroSegundos;
+         var minutos;
+         var horas;
+         var dias;
+         var semanas;
+         var resultadoFinal;
+
+         numeroSegundos=prompt('Numero de segundos que estamos confinados por una pandemia:')
+
+         minutos= (numeroSegundos/60);
+         horas= (minutos/60);
+         dias= (horas/24);
+         semanas=(dias/7);
+         resultadoFinal=`${semanas} semanas, ${dias} dias, ${horas} horas, ${minutos} minutos y ${numeroSegundos} segundos.`
+         console.log(resultadoFinal);
+         document.write(resultadoFinal);
+        
+    </script>
+</body>
+</html>

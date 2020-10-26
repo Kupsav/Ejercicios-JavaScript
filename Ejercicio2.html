@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2 JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio2 JavaScript</h1>
+    </header>
+    <script>
+         alert("Bienvenido a la actividad 2");
+         var libros;
+         var personas;
+         var a;
+         var b;
+         var resultado;
+         
+         libros=prompt('Numero de libros:');
+         personas=prompt('Numero de personas:');
+
+         a=(libros/personas);
+         console.log(
+             Math.trunc(a)
+         );
+
+         b=(libros%personas);
+         console.log(b);
+
+         resultado=(`
+         El numero de libros por persona es: ${Math.trunc(a)}
+         El número de libros que sobran es: ${b}
+         `);
+
+         console.log(resultado);
+         document.write(resultado);
+        
+    </script>
+</body>
+</html>
