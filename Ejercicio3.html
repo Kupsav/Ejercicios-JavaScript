@@ -10,33 +10,23 @@
         <h1>Ejercicio3 JavaScript</h1>
     </header>
     <script>
+
          alert("Bienvenido a la actividad 3")
-         var AA;
-         var BB;
-         var CC;
-         var AAElevado;
-         var BBElevado; 
-         var sumaAABB;
-         var resultado3;
 
-         AA=prompt('Valor de cateto AA:');
-         BB=prompt('Valor de cateto BB:');
+         // Empleamos let porque var puede tener efectos colaterales
+         /* Dentro de lo posible ahorramos memoria al declarar el menor
+            numero de variables. Pero podemos emplearlas si aclara el código
+            y siempre empleando nombres significativos
+         */
 
-         AAElevado=Math.pow(AA,2);
-         console.log(AAElevado);
+         let cateto1=prompt('Valor de cateto AA:');
+         let cateto2=prompt('Valor de cateto BB:');
 
-         BBElevado=Math.pow(BB,2);
-         console.log(BBElevado);
-
-         sumaAABB=(AAElevado+BBElevado);
-         console.log(sumaAABB);
-
-         CC=Math.sqrt(sumaAABB);
-         console.log(CC);
+         let hipotenusa=Math.sqrt(Math.pow(AA,2)+Math.pow(BB,2));
          
-         resultado3=`La hipotenusa del triangulo con catetos ${AA} y ${BB} es ${CC}.`;
-         console.log(resultado3);
-         document.write(resultado3)
+         let resultado=`La hipotenusa del triangulo con catetos ${cateto1} y ${cateto2} es ${hipotenusa}.`;
+         console.log(resultado);
+         document.write(resultado)
     </script>
 </body>
 </html>

@@ -11,23 +11,41 @@
     </header>
     <script>
          alert("Bienvenido a la actividad 6")
-         var numeroSegundos;
-         var minutos;
-         var horas;
-         var dias;
-         var semanas;
+
+        // Empleamos let porque var puede tener efectos colaterales
+        /* Dentro de lo posible ahorramos memoria al declarar el menor
+           numero de variables. Pero podemos emplearlas si aclara el código
+           y siempre empleando nombres significativos.
+        */
+
+        /* El ejercicio tiene truco. Se trata de convertir los segundos a otras
+           unidades de tiempo, pero entonces ya quedan menos segundos.
+
+           Imaginemos que decimos que estamos en pandemina 64 segundos. El resultado
+           deberia ser:
+
+                  1 minuto 4 segundos
+
+           Sería deseable que si no hay tiempo en alguna de las unidades, no se mostrara
+           esa unidad. Por ejemplo, en el caso de 1 hora+10segundos=3610 segundos debería
+           tener una salida:
+            
+                  1 hora 10 segundos
+
+            sin mostrar 0 minutos
+        */
+
          var resultadoFinal;
+         
+         let segundosMinuto=60;
+         let segundosHora=60*segundosMinuto;
+         let segundosDia=24*segundosHora;
+         let segundosSemana=7*segundosDia;
 
-         numeroSegundos=prompt('Numero de segundos que estamos confinados por una pandemia:')
+         let segundos=prompt('Numero de segundos que estamos confinados por una pandemia:')
 
-         minutos= (numeroSegundos/60);
-         horas= (minutos/60);
-         dias= (horas/24);
-         semanas=(dias/7);
-         resultadoFinal=`${semanas} semanas, ${dias} dias, ${horas} horas, ${minutos} minutos y ${numeroSegundos} segundos.`
          console.log(resultadoFinal);
-         document.write(resultadoFinal);
-        
+         document.write(resultadoFinal);        
     </script>
 </body>
 </html>

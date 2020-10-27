@@ -11,25 +11,23 @@
     </header>
     <script>
         alert("Bienvenido a la actividad 5")
-        var peso;
-        var estatura;
-        var edad;
-        var estatura2;
-        var imc;
-        var imcF;
+
+        // Empleamos let porque var puede tener efectos colaterales
+        /* Dentro de lo posible ahorramos memoria al declarar el menor
+           numero de variables. Pero podemos emplearlas si aclara el código
+           y siempre empleando nombres significativos
+        */
+
         var resultadoimc;
 
-        peso=prompt('Indica tu peso en kg:');
-        estatura=prompt('Indica tu estatura en metros:');
-        edad=prompt('Indica tu edad:');
+        let peso=prompt('Indica tu peso en kg:');
+        let estatura=prompt('Indica tu estatura en metros:');
+        let edad=prompt('Indica tu edad:');
 
-        estatura2=Math.pow(estatura,2);
-        imc=(peso/estatura2);
-        imcF= imc.toFixed(2);
-        console.log(imcF);
-        
+        let imc=(peso/Math.pow(estatura,2)).toFixed(2);
+        console.log(imc);
 
-        resultadoimc=`Tu Indice de Masa Corporal(IMC) tiene un valor de ${imcF}`
+        resultadoimc=`Tu Indice de Masa Corporal(IMC) tiene un valor de ${imc}`
         console.log(resultadoimc);
         document.write(resultadoimc);
 

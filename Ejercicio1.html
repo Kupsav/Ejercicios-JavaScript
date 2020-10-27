@@ -11,14 +11,16 @@
     </header>
     <script>
          alert("Bienvenido a tu primer script");
-         var nombre;
-         var edad;
-         var resultado;
-         nombre=prompt('Dime tu nombre, porfavor');
-         edad=prompt('Dime tu edad, porfavor');
-         resultado=(`Hola ${nombre}, tienes ${edad} años`)
-         console.log(resultado)
-         document.write(resultado)
+         // Empleamos let porque var puede tener efectos colaterales
+         /* Dentro de lo posible ahorramos memoria al declarar el menor
+            numero de variables. Pero podemos emplearlas si aclara el código
+            y siempre empleando nombres significativos
+         */
+
+         let nombre=prompt('Dime tu nombre, porfavor');
+         let edad=prompt('Dime tu edad, porfavor');
+         console.log(`Hola ${nombre}, tienes ${edad} años`)
+         document.write(`Hola ${nombre}, tienes ${edad} años`)
     </script>
 </body>
 </html>

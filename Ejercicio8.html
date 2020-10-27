@@ -11,39 +11,39 @@
     </header>
     <script>
          alert("Bienvenido al ejercicio8");
+
+         // Empleamos let porque var puede tener efectos colaterales
+         /* Dentro de lo posible ahorramos memoria al declarar el menor
+            numero de variables. Pero podemos emplearlas si aclara el código
+            y siempre empleando nombres significativos.
+         */
+
+         let preguntasTotales;
+         let preguntasAcertadas;
+
+         // Preguntamos hasta que las preguntas totales >= 0
+         do {
+            preguntasTotales=parseInt(prompt('Preguntas totales del examen:'));
+         } while (preguntasTotales<=0)
+
+         // Preguntamos mientras acertemos más que preguntas totales hay
+         do {
+            preguntasAcertadas=parseInt(prompt('Preguntas acertadas en el examen:'));
+         }  while (preguntasAcertadas>preguntasTotales)
          
-         var preguntasTotales;
-         preguntasTotales=prompt('Preguntas totales del examen:');
-         var preguntasAcertadas;
-         preguntasAcertadas=prompt('Preguntas acertadas en el examen:');
-         var A=90-100
-         var B=80-89
-         var C=70-79
-         var D=60-69
-         var F=0-59
-         var puntuacion;
+         // Porcentaje de preguntas acertadas en %100
+         let porcentaje=parseInt(100*preguntasAcertadas/preguntasTotales);
 
-         switch (puntuacion) { 
-    	 case valorA: 
-      	 La calificación en el examen será A;
-      	 break 
-   	     case valorB: 
-         La calificación en el examen será B;
-      	 break 
-   	     case valorC: 
-         La calificación en el examen será C;
-      	 break 
-         case valorD:
-         La calificación en el examen será D;
-         break
-         case valorF:
-         La calificación en el examen será F;
-         break
-   	     default: 
-      	 No se cumplen las condiciones anteriores; 
-         }
-
-        
+         if (porcentaje>=90)
+      	    console.log("La calificación en el examen será A")
+      	 else if (porcentaje>=80)
+            console.log("La calificación en el examen será B")
+         else if (porcentaje>=70)
+            console.log("La calificación en el examen será C")
+         else if (porcentaje>=60)
+            console.log("La calificación en el examen será D")
+         else if (porcentaje>=0)
+            console.log("La calificación en el examen será F");
     </script>
 </body>
 </html>

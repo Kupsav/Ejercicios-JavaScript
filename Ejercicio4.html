@@ -10,27 +10,28 @@
         <h1>Ejercicio4 JavaScript</h1>
     </header>
     <script>
-         alert("Bienvenido a la actividad 4");
-         var Numero1; 
-         var Numero2;
-         var Numero3;
-         
-         Numero1=prompt('Dime un numero entero:');
-         Numero2=prompt('Dime un numero entero:');
-         Numero3=prompt('Dime un numero entero:');
+        alert("Bienvenido a la actividad 4");
+        
+         // Empleamos let porque var puede tener efectos colaterales
+         /* Dentro de lo posible ahorramos memoria al declarar el menor
+            numero de variables. Pero podemos emplearlas si aclara el código
+            y siempre empleando nombres significativos
+         */
 
-         if (Numero1 > Numero2 && Numero1 > Numero3) {
-             alert(`El ${Numero1} es mas grande`);
-             }
-         else if (Numero2 > Numero1 && Numero2 > Numero3) {
-             alert(`El ${Numero2} es mas grande`);
-             }
-         else if (Numero3 > Numero1 && Numero3 > Numero2) {
-             alert(`El ${Numero3} es mas grande`);
-             }
-         else {
-             alert(`No cumple ninguna de las condiciones`)
-         }
+        let numero1=prompt('Dime un numero entero:');
+        let numero2=prompt('Dime un numero entero:');
+        let numero3=prompt('Dime un numero entero:');
+
+        // La versión mas corta
+        //maximo=Math.max(numero1,numero2,numero3)
+
+        let maximo=numero1;
+        if (numero2>maximo)
+           maximo=numero2
+        if (numero3>maximo)
+           maximo=numero3
+
+        alert(`El ${maximo} es el mas grande`);
     </script>
 </body>
 </html>

@@ -11,8 +11,21 @@
     </header>
     <script>
          alert("Bienvenido a la actividad 7")
-         let i = 0; do { i += 1; console.log(i); } while (i < 5);
-         
+
+         let maximo=Number.NEGATIVE_INFINITY;
+         let numero=maximo;
+         do {
+             numero=parseInt(prompt("Dame un número:"));
+             if (numero>maximo && numero!=0) {
+                 maximo=numero
+                 console.log(maximo)
+             }
+         } while (numero!=0)
+
+         if (maximo!=Number.NEGATIVE_INFINITY)
+            console.log(`El numero maximo introducido es ${maximo}`)
+         else
+            console.log("Error. No has introducido ningun número");
     </script>
 </body>
 </html>
