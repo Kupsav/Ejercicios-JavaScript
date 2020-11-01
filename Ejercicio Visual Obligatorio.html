@@ -17,23 +17,51 @@
         var tabla9=9;
         var cantidad=10;
 
-        for(var i=1; i<=cantidad; i++){
-            document.write(tabla7+"X"+i+"="+(tabla7*i)+"<br>");
-        }
+        document.write("<h2>Tabla de multiplicar del "+ tabla7 +"</h2>");
+        document.write("<ul>");
+            for(i = 1;i<=cantidad;i++){
+                 document.write("<li>");
+                 document.write(tabla7 + "x " + i + "= " + tabla7 * i);
+                 document.write("</li>");
+                 console.log(tabla7+"X"+i+"= "+(tabla7*i))
+            }
+        document.write("</ul>");
 
-        var x=1;
-        while(x<=cantidad)
-        {
-            x++;
-            document.write(tabla8+"X"+x+"="+(tabla8*x)+"<br>");
-        }
+        document.write("<h2>Tabla de multiplicar del "+ tabla8 +"</h2>");
+        document.write("<ul>");
+            var x=1;
+            while(x<=cantidad){
+                 document.write("<li>");
+                 document.write(tabla8 + "x " + x + "= " + tabla8 * x);
+                 document.write("</li>");
+                 console.log(tabla8+"X"+x+"= "+(tabla8*x))
+                 x++;
+            }    
+        document.write("</ul>");
 
-        var y=1;
-        do{
-            document.write(tabla9+"X"+y+"="+(tabla9*y)+"<br>");
-            y++
-        }
-        while (y<=cantidad)
+        document.write("<h2>Tabla de multiplicar del "+ tabla9 +"</h2>");
+        document.write("<ul>");
+            var t=1;
+            do{
+                 document.write("<li>");
+                 document.write(tabla9 + "x " + t + "= " + tabla9 * t);
+                 document.write("</li>");
+                 console.log(tabla9+"X"+t+"= "+(tabla9*t));
+                 t++;
+            }
+            while (t<=cantidad)
+        document.write("</ul>");
+
+        //Operaciones con desplazamiento de bits
+        document.write("<h2>Operaciones con desplazamiento de bits</h2>");
+
+        
+
+        
+    
+
+
+        
 
 
 
