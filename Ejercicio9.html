@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <header>
+      <h1>Ejercicio9 JavaScript</h1>
+  </header>
+    <script type="text/javascript">
+       alert("Bienvenido al ejercicio8");
+       let ndia,nmes;
+
+       // Mientras el dia no esté entre 1 y 31 continuamos pidiendolo
+       do {
+          ndia=parseInt(prompt("Introduce el dia de nacimiento"));
+       } while (ndia<=0||ndia>31)
+
+       // Mientras el mes no esté entre 1 y 12 continuamos pidiendolo
+       do {
+          nmes=parseInt(prompt("Introduce el mes de nacimiento"));
+       } while (nmes<=0||nmes>12)
+
+       let nanho=parseInt(prompt("Introduce el año de nacimiento"));
+
+       // Numero de la suerte=dia+mes+año
+       let nsuerte=ndia+nmes+nanho;
+
+       // Para calcular realmente el numero de la suerte tenemos que sumar los dígitos del valor calculado anteriormente
+       // La forma mas sencilla es convertir el numero a cadena, recorrer la cadena convirtiendo cada caracter en entero y
+       // sumándolos
+       let numSuerteFinal=0
+       let numSuerteStr=nsuerte.toString()
+       for (i=0;i<numSuerteStr.length;i++)
+          numSuerteFinal+=parseInt(numSuerteStr[i])
+
+       // Sacamos los mensajes a través de la consola y en el propio documento web
+       console.log(`El número de la suerte que corresponde al ${ndia}/${nmes}/${nanho} es ${numSuerteFinal}`)
+       document.write(`El número de la suerte que corresponde al ${ndia}/${nmes}/${nanho} es ${numSuerteFinal}`)
+    </script>
+</body>
+</html>

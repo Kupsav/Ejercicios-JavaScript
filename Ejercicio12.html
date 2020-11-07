@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+      let suma=0;
+      let mayor=Number.NEGATIVE_INFINITY
+      let menor=Number.POSITIVE_INFINITY
+      
+      let arr = [];
+      for (let i=0; i<50; i++) {
+         numero=Math.round(Math.random() * 100)
+         arr.push(numero)
+         suma+=numero
+         if (numero>mayor)
+            mayor=numero
+         if (numero<menor)
+            menor=numero
+      }
+
+      // Calculamos la media teniendo en cuenta la longitud del array
+      // de esta forma generalizamos el script
+      let media=suma/arr.length
+
+      console.log(`Los 50 elementos aleatorios del array son: ${arr}`);
+      console.log(`El mayor número en el array es ${mayor}`);
+      console.log(`El menor número en el array es ${menor}`);
+      console.log(`El valor medio de los elementos del array es ${media}`);
+
+      document.write(`<p>Los 50 elementos aleatorios del array son:<p>${arr}`);
+      document.write(`<p>El mayor número en el array es ${mayor}`);
+      document.write(`<p>El menor número en el array es ${menor}`);
+      document.write(`<p>El valor medio de los elementos del array es ${media}`);
+    </script>
+</body>
+</html>
