@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10 JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio10 JavaScript</h1>
+    </header>
+    <script>
+         alert("Bienvenido al ejercicio10");
+         let f=prompt('Dime una temperatura en Fahrenheit:');
+         let c=((5/9)*(f-32)).toFixed(2);
+         let resultado=(`${f} grados Fahrenheit son ${c}º Celsius`);
+
+         console.log(resultado);
+         document.write(resultado);
+
+         if(c>=25){
+             console.log("Hace calor");
+             alert("Hace calor");
+         }
+         else if(c<25 && c>=10){
+             console.log("Hace buen tiempo");
+             alert("Hace buen tiempo");
+         }
+         else if(c<10 && c>0){
+             console.log("Hace frio");
+             alert("Hace frio");
+         }
+         else if(c<0){
+             console.log("Hace mucho frio");
+             alert("Hace mucho frio");
+         }
+
+        
+    </script>
+</body>
+</html>
