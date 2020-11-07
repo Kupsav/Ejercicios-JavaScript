@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio9 JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Ejercicio9 JavaScript</h1>
+    </header>
+    <script>
+         alert("Bienvenido a la actividad 9");
+         let dia=prompt('Dime tu dia de nacimiento:');
+         let mes=prompt('Dime el número de tu mes de nacimiento:');
+         let año=prompt('Dime tu año de nacimiento:');
+
+         let numero=(dia+mes+año);
+         let nSuerte=(numero.toString().split('').reduce(function(r, n) { return r + parseInt(n) }, 0));
+         
+         
+         console.log(nSuerte);
+         document.write(nSuerte)
+         
+    </script>
+</body>
+</html>
