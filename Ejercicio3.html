@@ -10,20 +10,19 @@
         <h1>Ejercicio3 JavaScript</h1>
     </header>
     <script>
-
          alert("Bienvenido a la actividad 3")
 
-         // Empleamos let porque var puede tener efectos colaterales
-         /* Dentro de lo posible ahorramos memoria al declarar el menor
+            // Empleamos let porque var puede tener efectos colaterales
+            /* Dentro de lo posible ahorramos memoria al declarar el menor
             numero de variables. Pero podemos emplearlas si aclara el código
             y siempre empleando nombres significativos
-         */
+            */
 
          let cateto1=prompt('Valor de cateto AA:');
          let cateto2=prompt('Valor de cateto BB:');
 
          let hipotenusa=Math.sqrt(Math.pow(AA,2)+Math.pow(BB,2));
-         
+
          let resultado=`La hipotenusa del triangulo con catetos ${cateto1} y ${cateto2} es ${hipotenusa}.`;
          console.log(resultado);
          document.write(resultado)

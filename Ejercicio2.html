@@ -11,17 +11,8 @@
     </header>
     <script>
          alert("Bienvenido a la actividad 2");
-
-         // Empleamos let porque var puede tener efectos colaterales
-         /* Dentro de lo posible ahorramos memoria al declarar el menor
-            numero de variables. Pero podemos emplearlas si aclara el código
-            y siempre empleando nombres significativos.
-         */
-         
          let libros=prompt('Numero de libros:');
-         let personas=prompt('Numero de personas:');         
-
-        // Convertimos a entero la división libros/personas
+         let personas=prompt('Numero de personas:');
          let resultado=(`
          El numero de libros por persona es: ${parseInt(libros/personas)}
          El número de libros que sobran es: ${libros%personas}

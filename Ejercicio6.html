@@ -11,43 +11,18 @@
     </header>
     <script>
          alert("Bienvenido a la actividad 6")
+         let numeroSegundos=prompt('Numero de segundos que estamos confinados por una pandemia:')
 
-        // Empleamos let porque var puede tener efectos colaterales
-        /* Dentro de lo posible ahorramos memoria al declarar el menor
-           numero de variables. Pero podemos emplearlas si aclara el código
-           y siempre empleando nombres significativos.
-        */
+         let minutos= (numeroSegundos/60).toFixed(2);
+         let horas= (minutos/60).toFixed(2);
+         let dias=(horas/24).toFixed(2);
+         let semanas=(dias/7).toFixed(2);
+         let resultadoFinal=`${semanas} semanas, ${dias} dias, ${horas} horas, ${minutos} minutos y ${numeroSegundos} segundos.`
 
-        /* El ejercicio tiene truco. Se trata de convertir los segundos a otras
-           unidades de tiempo, pero entonces ya quedan menos segundos.
-
-           Imaginemos que decimos que estamos en pandemina 64 segundos. El resultado
-           deberia ser:
-
-                  1 minuto 4 segundos
-
-           Sería deseable que si no hay tiempo en alguna de las unidades, no se mostrara
-           esa unidad. Por ejemplo, en el caso de 1 hora+10segundos=3610 segundos debería
-           tener una salida:
-            
-                  1 hora 10 segundos
-
-            sin mostrar 0 minutos
-        */
-
-         let resultadoFinal;
-         
-         let segundosMinuto=60;
-         let segundosHora=60*segundosMinuto;
-         let segundosDia=24*segundosHora;
-         let segundosSemana=7*segundosDia;
-
-         let segundos=prompt('Numero de segundos que estamos confinados por una pandemia:')
-
-         
 
          console.log(resultadoFinal);
-         document.write(resultadoFinal);        
+         document.write(resultadoFinal);
+        
     </script>
 </body>
 </html>
