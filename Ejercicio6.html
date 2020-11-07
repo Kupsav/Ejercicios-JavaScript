@@ -35,7 +35,7 @@
             sin mostrar 0 minutos
         */
 
-         let resultadoFinal;
+         let resultadoFinal="";
          
          let segundosMinuto=60;
          let segundosHora=60*segundosMinuto;
@@ -44,7 +44,32 @@
 
          let segundos=prompt('Numero de segundos que estamos confinados por una pandemia:')
 
-         
+         let semanas=parseInt(segundos/segundosSemana);
+         if (semanas>0) {
+            resultadoFinal=`{semanas} semanas `
+            segundos=segundos%segundosSemana
+         }
+
+         let dias=parseInt(segundos/segundosDia)
+         if (dias>0) {
+            resultadoFinal+=`${dias} dias `
+            segundos=segundos%segundosDia
+         }
+
+         let horas=parseInt(segundos/segundosHora);
+         if (horas>0) {
+             resultadoFinal+=`${horas} horas `
+             segundos=segundos%segundosHora
+         }
+
+         let minutos=parseInt(segundos/segundosMinuto);
+         if (minutos>0) {
+            resultadoFinal+=`${minutos} minutos `
+            segundos=segundos%segundosMinuto
+         }
+
+         if (segundos>0)
+            resultadoFinal+=`${segundos} segundos `
 
          console.log(resultadoFinal);
          document.write(resultadoFinal);        
